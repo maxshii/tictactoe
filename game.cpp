@@ -20,8 +20,19 @@ int main()
   while(play == true)
     {
       int grid[3][3] = {{0,0,0}, {0,0,0}, {0,0,0}};
+      
+      for (int i = 0; i < 3; i++)
+	{
+	  pointToGrid[i] = new int[3];  
+	for (int j = 0; j < 3; j++)
+	  {
+	  **pointToGrid[i][j] = grid[i][j];
+	  }
+	}
       char input[3];
       printGrid(grid);
+      cout << "Player " << player << " move: ";
+      getMove(pointToGrid[3][3], player);
       play = false;
     }
 }
